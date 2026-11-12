@@ -1,0 +1,17 @@
+.etapas{display:flex;justify-content:space-between;margin:20px 0 26px;gap:8px}
+.etapas li{display:flex;flex-direction:column;align-items:center;gap:6px;font-weight:700;font-size:.85rem;flex:1}
+.etapas li span{width:48px;height:48px;display:grid;place-items:center;background:#fff;border:1.5px solid var(--borda);border-radius:10px;font-size:1rem}
+.etapas li.ativo span{background:var(--marrom);color:#fff;border-color:var(--marrom)}
+.checkout{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:start}
+.painel{background:#fff;border:1.5px solid var(--borda);border-radius:30px;padding:26px;box-shadow:var(--sombra);display:flex;flex-direction:column;gap:14px}
+.painel h2{font-size:1.2rem}
+.campo{display:flex;flex-direction:column;gap:5px;font-size:.9rem;font-weight:600;color:var(--marrom)}
+.campo input{padding:13px 14px;border:1.5px solid var(--borda);border-radius:8px;font-size:1rem;background:var(--creme);outline:none}
+.campo input:focus{border-color:var(--laranja)}
+.pagamento{display:flex;gap:12px;align-items:flex-start;padding:14px 16px;border:1.5px solid var(--borda);border-radius:12px;cursor:pointer}
+.pagamento input{accent-color:var(--marrom);margin-top:5px;width:18px;height:18px}
+.pagamento span{display:flex;flex-direction:column}.pagamento small{color:var(--suave)}
+.pagamento:has(input:checked){border-color:var(--marrom);background:var(--bege)}
+.resumo-mini{background:var(--bege);border:1.5px solid var(--borda);border-radius:12px;padding:16px}
+.resumo-mini__total{font-size:1.4rem;font-weight:800;color:var(--marrom);margin-top:6px}
+@media(max-width:860px){.checkout{grid-template-columns:1fr}.etapas li span{width:40px;height:40px}}

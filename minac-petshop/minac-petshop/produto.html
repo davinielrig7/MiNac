@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bola Pet — PetShop Minac</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/produto.css">
+</head>
+<body>
+<header class="topo">
+  <div class="topo__barra container">
+    <a class="logo" href="index.html"><img src="assets/images/logo.svg" alt="" width="52" height="52"><span>PetShop<b>Minac</b></span></a>
+    <form class="busca" action="produtos.html" method="get"><input type="search" name="q" placeholder="O que você procura?" aria-label="Pesquisar"><button type="submit" aria-label="Buscar">⌕</button></form>
+    <div class="topo__acoes">
+      <a class="icone-whats" href="index.html#contato" aria-label="WhatsApp">💬</a>
+      <a class="icone-carrinho" href="carrinho.html" aria-label="Carrinho">🛒<span class="contador">0</span></a>
+      <span class="avatar" aria-hidden="true">👤</span>
+    </div>
+  </div>
+  <nav class="menu"><div class="container">
+    <a href="produtos.html">☰ Categorias ⌄</a>
+    <a href="index.html" class="">Início</a><a href="produtos.html" class="ativo">Destaques</a><a href="index.html#sobre" class="">Sobre nós</a><a href="index.html#contato" class="">Contato</a>
+  </div></nav>
+</header>
+<main>
+<div class="container">
+<nav class="migalhas" aria-label="Caminho"><a href="index.html">Início</a> › <a href="produtos.html">Brinquedos</a> › <span>Bola Pet</span></nav>
+<article class="detalhe" data-id="1" data-categoria="Brinquedos">
+  <div class="detalhe__galeria"><div class="detalhe__principal"><img class="produto-imagem" src="assets/images/bola-pet.svg" alt="Bola Pet"></div>
+  <div class="detalhe__miniaturas"><img src="assets/images/bola-pet.svg" alt=""><img src="assets/images/bola-pet.svg" alt=""><img src="assets/images/bola-pet.svg" alt=""></div></div>
+  <div class="detalhe__info">
+    <h1 class="produto-nome">Bola Pet</h1>
+    <p class="avaliacoes produto-avaliacoes">★★★★★ <span>(128 avaliações)</span></p>
+    <p class="detalhe__preco produto-preco">R$ 29,90</p>
+    <p class="produto-descricao">Bola de borracha resistente e atóxica, ideal para brincadeiras e exercícios do seu pet. Textura com espinhos que massageia as gengivas e estimula a diversão.</p>
+    <span class="badge badge-ok">✓ Em estoque</span>
+    <form class="compra" action="carrinho.html" method="get">
+      <label class="qtd"><span class="sr">Quantidade</span><input type="number" name="quantidade" value="1" min="1" max="99"></label>
+      <button class="btn btn-primary" type="submit">🛒 Adicionar ao carrinho</button>
+    </form>
+    <section class="info-box"><h2>Informações do produto</h2>
+    <dl><dt>Categoria</dt><dd>Brinquedos</dd><dt>Material</dt><dd>Borracha atóxica</dd><dt>Características</dt><dd>Resistente, lavável, com textura massageadora</dd><dt>Tamanho</dt><dd>7 cm de diâmetro</dd></dl></section>
+  </div>
+</article></div>
+</main>
+<footer class="rodape" id="contato"><div class="container rodape__grade">
+  <div><a class="logo" href="index.html"><img src="assets/images/logo.svg" alt="" width="48" height="48"><span>PetShop<b>Minac</b></span></a><p>Tudo para o seu pet, com carinho e qualidade.</p></div>
+  <div><h4>Informações</h4><p>Rua dos Pets, 123 — Centro</p><p>Seg a Sáb, 8h às 18h</p></div>
+  <div><h4>Contato</h4><p>(00) 00000-0000</p><p>contato@petshopminac.com</p></div>
+  <div><h4>Redes sociais</h4><p>Instagram · Facebook · WhatsApp</p></div>
+</div><p class="rodape__copy">© 2026 PetShop Minac. Todos os direitos reservados.</p></footer>
+</body>
+</html>

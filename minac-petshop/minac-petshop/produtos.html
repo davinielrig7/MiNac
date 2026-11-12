@@ -1,146 +1,125 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Página de Produtos | Minac</title>
-
-    <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-        rel="stylesheet"
-    >
-
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nossos produtos — PetShop Minac</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/produtos.css">
 </head>
-
 <body>
-
-    <!-- CABEÇALHO -->
-    <header class="topbar">
-
-        <div class="container-fluid d-flex align-items-center justify-content-between px-4 px-lg-5">
-
-            <div class="brand-area">
-
-                <a class="icon-btn" href="index.html" aria-label="Perfil">
-                    <span class="person"></span>
-                </a>
-
-                <h1 class="page-title">
-                    PÁGINA DE PRODUTOS
-                </h1>
-
-            </div>
-
-            <div class="header-actions">
-
-                <div class="search-box">
-                    PROCURAR　⌕
-                </div>
-
-                <a class="icon-btn" href="carrinho.html" aria-label="Carrinho">
-                    🛒
-                </a>
-
-            </div>
-
-        </div>
-
-    </header>
-
-    <!-- DECORAÇÃO DE PATINHAS -->
-    <div class="paw-strip">
-        🐾 · 🐾 · 🐾 · 🐾 · 🐾 · 🐾 · 🐾
+<header class="topo">
+  <div class="topo__barra container">
+    <a class="logo" href="index.html"><img src="assets/images/logo.svg" alt="" width="52" height="52"><span>PetShop<b>Minac</b></span></a>
+    <form class="busca" action="produtos.html" method="get"><input type="search" name="q" placeholder="O que você procura?" aria-label="Pesquisar"><button type="submit" aria-label="Buscar">⌕</button></form>
+    <div class="topo__acoes">
+      <a class="icone-whats" href="index.html#contato" aria-label="WhatsApp">💬</a>
+      <a class="icone-carrinho" href="carrinho.html" aria-label="Carrinho">🛒<span class="contador">0</span></a>
+      <span class="avatar" aria-hidden="true">👤</span>
     </div>
-
-    <!-- MENU DE NAVEGAÇÃO -->
-    <nav class="main-nav">
-
-        <div class="container-fluid px-4 px-lg-5 d-flex gap-5">
-
-            <a href="index.html">HOME</a>
-
-            <a href="index.html">DESTAQUE⌄</a>
-
-            <a href="produtos.html">PRODUTOS⌄</a>
-
-        </div>
-
-    </nav>
-
-    <!-- CONTEÚDO PRINCIPAL -->
-    <main class="container-fluid page-wrap">
-
-        <div class="content">
-
-            <!-- LISTA DE PRODUTOS -->
-            <div class="row justify-content-center g-5 product-grid">
-
-                <!-- PRODUTO 1: RAÇÃO PEDIGREE -->
-                <div class="col-10 col-sm-6 col-lg-3">
-
-                    <a class="product-card" href="produto-racao.html">
-
-                        <img
-                            src="img/racao-pedigree.jpg"
-                            alt="Ração Pedigree para cães"
-                        >
-
-                        <span>
-                            RAÇÃO PEDIGREE R$ 69,90
-                        </span>
-
-                    </a>
-
-                </div>
-
-                <!-- PRODUTO 2: SHAMPOO -->
-                <div class="col-10 col-sm-6 col-lg-3">
-
-                    <a class="product-card" href="produto-shampoo.html">
-
-                        <img
-                            src="img/shampoo.jpg"
-                            alt="Shampoo para cachorro"
-                        >
-
-                        <span>
-                            SHAMPOO R$ 89,90
-                        </span>
-
-                    </a>
-
-                </div>
-
-                <!-- PRODUTO 3: SIMPARIC -->
-                <div class="col-10 col-sm-6 col-lg-3">
-
-                    <a class="product-card" href="produto-simparic.html">
-
-                        <img
-                            src="img/simparic.jpg"
-                            alt="Antiparasitário Simparic"
-                        >
-
-                        <span>
-                            REMÉDIO PULGA R$ 49,90
-                        </span>
-
-                    </a>
-
-                </div>
-
-            </div>
-
-            <!-- DIVISÓRIA -->
-            <div class="dotted-line"></div>
-
-        </div>
-
-    </main>
-
+  </div>
+  <nav class="menu"><div class="container">
+    <a href="produtos.html">☰ Categorias ⌄</a>
+    <a href="index.html" class="">Início</a><a href="produtos.html" class="ativo">Destaques</a><a href="index.html#sobre" class="">Sobre nós</a><a href="index.html#contato" class="">Contato</a>
+  </div></nav>
+</header>
+<main>
+<div class="container">
+<h1 class="titulo-pagina">Nossos produtos</h1><p class="sub-pagina">Encontre produtos para cuidar do seu melhor amigo.</p>
+<div class="catalogo">
+<aside class="filtros"><h2>Filtrar por categoria</h2><ul>
+<li><a class="ativo" href="produtos.html">Todos</a></li><li><a href="produtos.html">Brinquedos</a></li><li><a href="produtos.html">Acessórios</a></li><li><a href="produtos.html">Rações</a></li><li><a href="produtos.html">Medicamentos</a></li></ul></aside>
+<div class="catalogo__lista">
+<form class="busca-produtos" action="produtos.html" method="get"><input type="search" name="q" placeholder="Buscar produtos..." aria-label="Buscar produtos"></form>
+<div class="grade-produtos">
+<article class="produto-card" data-id="1" data-categoria="Brinquedos" data-estoque="1">
+  <a class="produto-card__img" href="produto.html"><img src="assets/images/bola-pet.svg" alt="Bola Pet" class="produto-imagem"></a>
+  <span class="produto-card__cat produto-categoria">Brinquedos</span>
+  <h3 class="produto-card__nome produto-nome">Bola Pet</h3>
+  <p class="produto-card__preco produto-preco">R$ 29,90</p>
+  <span class="badge badge-ok">✓ Em estoque</span>
+  <a class="btn btn-outline btn-block" href="produto.html">Ver produto</a>
+  <a class="btn btn-primary btn-block" href="carrinho.html">＋ Adicionar ao carrinho</a>
+</article>
+<article class="produto-card" data-id="2" data-categoria="Acessórios" data-estoque="1">
+  <a class="produto-card__img" href="produto.html"><img src="assets/images/peitoral.svg" alt="Peitoral Ajustável" class="produto-imagem"></a>
+  <span class="produto-card__cat produto-categoria">Acessórios</span>
+  <h3 class="produto-card__nome produto-nome">Peitoral Ajustável</h3>
+  <p class="produto-card__preco produto-preco">R$ 79,90</p>
+  <span class="badge badge-ok">✓ Em estoque</span>
+  <a class="btn btn-outline btn-block" href="produto.html">Ver produto</a>
+  <a class="btn btn-primary btn-block" href="carrinho.html">＋ Adicionar ao carrinho</a>
+</article>
+<article class="produto-card" data-id="3" data-categoria="Rações" data-estoque="1">
+  <a class="produto-card__img" href="produto.html"><img src="assets/images/racao.svg" alt="Ração Premium 15kg" class="produto-imagem"></a>
+  <span class="produto-card__cat produto-categoria">Rações</span>
+  <h3 class="produto-card__nome produto-nome">Ração Premium 15kg</h3>
+  <p class="produto-card__preco produto-preco">R$ 149,90</p>
+  <span class="badge badge-ok">✓ Em estoque</span>
+  <a class="btn btn-outline btn-block" href="produto.html">Ver produto</a>
+  <a class="btn btn-primary btn-block" href="carrinho.html">＋ Adicionar ao carrinho</a>
+</article>
+<article class="produto-card" data-id="4" data-categoria="Brinquedos" data-estoque="1">
+  <a class="produto-card__img" href="produto.html"><img src="assets/images/pelucia.svg" alt="Pelúcia Cachorro" class="produto-imagem"></a>
+  <span class="produto-card__cat produto-categoria">Brinquedos</span>
+  <h3 class="produto-card__nome produto-nome">Pelúcia Cachorro</h3>
+  <p class="produto-card__preco produto-preco">R$ 49,90</p>
+  <span class="badge badge-ok">✓ Em estoque</span>
+  <a class="btn btn-outline btn-block" href="produto.html">Ver produto</a>
+  <a class="btn btn-primary btn-block" href="carrinho.html">＋ Adicionar ao carrinho</a>
+</article>
+<article class="produto-card" data-id="5" data-categoria="Acessórios" data-estoque="1">
+  <a class="produto-card__img" href="produto.html"><img src="assets/images/coleira.svg" alt="Coleira" class="produto-imagem"></a>
+  <span class="produto-card__cat produto-categoria">Acessórios</span>
+  <h3 class="produto-card__nome produto-nome">Coleira</h3>
+  <p class="produto-card__preco produto-preco">R$ 39,90</p>
+  <span class="badge badge-ok">✓ Em estoque</span>
+  <a class="btn btn-outline btn-block" href="produto.html">Ver produto</a>
+  <a class="btn btn-primary btn-block" href="carrinho.html">＋ Adicionar ao carrinho</a>
+</article>
+<article class="produto-card" data-id="6" data-categoria="Acessórios" data-estoque="1">
+  <a class="produto-card__img" href="produto.html"><img src="assets/images/caminha.svg" alt="Caminha para cachorro" class="produto-imagem"></a>
+  <span class="produto-card__cat produto-categoria">Acessórios</span>
+  <h3 class="produto-card__nome produto-nome">Caminha para cachorro</h3>
+  <p class="produto-card__preco produto-preco">R$ 119,90</p>
+  <span class="badge badge-ok">✓ Em estoque</span>
+  <a class="btn btn-outline btn-block" href="produto.html">Ver produto</a>
+  <a class="btn btn-primary btn-block" href="carrinho.html">＋ Adicionar ao carrinho</a>
+</article>
+<article class="produto-card" data-id="7" data-categoria="Brinquedos" data-estoque="1">
+  <a class="produto-card__img" href="produto.html"><img src="assets/images/brinquedo-gato.svg" alt="Brinquedo para gatos" class="produto-imagem"></a>
+  <span class="produto-card__cat produto-categoria">Brinquedos</span>
+  <h3 class="produto-card__nome produto-nome">Brinquedo para gatos</h3>
+  <p class="produto-card__preco produto-preco">R$ 24,90</p>
+  <span class="badge badge-ok">✓ Em estoque</span>
+  <a class="btn btn-outline btn-block" href="produto.html">Ver produto</a>
+  <a class="btn btn-primary btn-block" href="carrinho.html">＋ Adicionar ao carrinho</a>
+</article>
+<article class="produto-card" data-id="8" data-categoria="Acessórios" data-estoque="0">
+  <a class="produto-card__img" href="produto.html"><img src="assets/images/comedouro.svg" alt="Comedouro" class="produto-imagem"></a>
+  <span class="produto-card__cat produto-categoria">Acessórios</span>
+  <h3 class="produto-card__nome produto-nome">Comedouro</h3>
+  <p class="produto-card__preco produto-preco">R$ 34,90</p>
+  <span class="badge badge-off">Sob encomenda</span>
+  <a class="btn btn-outline btn-block" href="produto.html">Ver produto</a>
+  <a class="btn btn-primary btn-block" href="carrinho.html">＋ Adicionar ao carrinho</a>
+</article>
+<article class="produto-card" data-id="9" data-categoria="Medicamentos" data-estoque="1">
+  <a class="produto-card__img" href="produto.html"><img src="assets/images/shampoo.svg" alt="Shampoo para pets" class="produto-imagem"></a>
+  <span class="produto-card__cat produto-categoria">Medicamentos</span>
+  <h3 class="produto-card__nome produto-nome">Shampoo para pets</h3>
+  <p class="produto-card__preco produto-preco">R$ 44,90</p>
+  <span class="badge badge-ok">✓ Em estoque</span>
+  <a class="btn btn-outline btn-block" href="produto.html">Ver produto</a>
+  <a class="btn btn-primary btn-block" href="carrinho.html">＋ Adicionar ao carrinho</a>
+</article>
+</div></div></div></div>
+</main>
+<footer class="rodape" id="contato"><div class="container rodape__grade">
+  <div><a class="logo" href="index.html"><img src="assets/images/logo.svg" alt="" width="48" height="48"><span>PetShop<b>Minac</b></span></a><p>Tudo para o seu pet, com carinho e qualidade.</p></div>
+  <div><h4>Informações</h4><p>Rua dos Pets, 123 — Centro</p><p>Seg a Sáb, 8h às 18h</p></div>
+  <div><h4>Contato</h4><p>(00) 00000-0000</p><p>contato@petshopminac.com</p></div>
+  <div><h4>Redes sociais</h4><p>Instagram · Facebook · WhatsApp</p></div>
+</div><p class="rodape__copy">© 2026 PetShop Minac. Todos os direitos reservados.</p></footer>
 </body>
 </html>

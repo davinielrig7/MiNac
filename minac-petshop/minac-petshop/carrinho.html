@@ -1,165 +1,49 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Carrinho | Minac</title>
-
-    <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-        rel="stylesheet"
-    >
-
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Meu carrinho — PetShop Minac</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/carrinho.css">
 </head>
-
 <body>
-
-    <!-- CABEÇALHO -->
-    <header class="topbar">
-
-        <div class="container-fluid d-flex align-items-center justify-content-between px-4 px-lg-5">
-
-            <div class="brand-area">
-
-                <a class="icon-btn" href="index.html" aria-label="Perfil">
-                    <span class="person"></span>
-                </a>
-
-                <h1 class="page-title">CARRINHO</h1>
-
-            </div>
-
-            <div class="header-actions">
-
-                <div class="search-box">
-                    PROCURAR　⌕
-                </div>
-
-                <a class="icon-btn" href="carrinho.html" aria-label="Carrinho">
-                    🛒
-                </a>
-
-            </div>
-
-        </div>
-
-    </header>
-
-    <!-- DECORAÇÃO DE PATINHAS -->
-    <div class="paw-strip">
-        🐾 · 🐾 · 🐾 · 🐾 · 🐾 · 🐾 · 🐾
+<header class="topo">
+  <div class="topo__barra container">
+    <a class="logo" href="index.html"><img src="assets/images/logo.svg" alt="" width="52" height="52"><span>PetShop<b>Minac</b></span></a>
+    <form class="busca" action="produtos.html" method="get"><input type="search" name="q" placeholder="O que você procura?" aria-label="Pesquisar"><button type="submit" aria-label="Buscar">⌕</button></form>
+    <div class="topo__acoes">
+      <a class="icone-whats" href="index.html#contato" aria-label="WhatsApp">💬</a>
+      <a class="icone-carrinho" href="carrinho.html" aria-label="Carrinho">🛒<span class="contador">0</span></a>
+      <span class="avatar" aria-hidden="true">👤</span>
     </div>
-
-    <!-- CONTEÚDO PRINCIPAL -->
-    <main class="container-fluid page-wrap">
-
-        <div class="content">
-
-            <!-- LISTA DE PRODUTOS -->
-            <div class="cart-list">
-
-                <!-- PRODUTO 1 -->
-                <article class="cart-item">
-
-                    <input type="checkbox" checked>
-
-                    <img
-                        src="img/racao-pedigree.jpg"
-                        alt="Ração Pedigree para cães"
-                    >
-
-                    <div class="cart-item-name">
-                        RAÇÃO PEDIGREE PARA CÃES
-                    </div>
-
-                    <div class="cart-meta">
-                        VALOR UNITÁRIO: R$ 69,90
-                    </div>
-
-                    <div class="cart-meta">
-                        VALOR TOTAL: R$ 139,80
-                    </div>
-
-                    <label class="cart-meta">
-                        QUANTIDADE:
-                        <input
-                            class="qty"
-                            type="number"
-                            min="1"
-                            value="2"
-                        >
-                    </label>
-
-                </article>
-
-                <div class="dotted-line"></div>
-
-                <!-- PRODUTO 2 -->
-                <article class="cart-item">
-
-                    <input type="checkbox" checked>
-
-                    <img
-                        src="img/shampoo.jpg"
-                        alt="Shampoo para cachorro"
-                    >
-
-                    <div class="cart-item-name">
-                        SHAMPOO PARA CACHORRO
-                    </div>
-
-                    <div class="cart-meta">
-                        VALOR UNITÁRIO: R$ 89,90
-                    </div>
-
-                    <div class="cart-meta">
-                        VALOR TOTAL: R$ 89,90
-                    </div>
-
-                    <label class="cart-meta">
-                        QUANTIDADE:
-                        <input
-                            class="qty"
-                            type="number"
-                            min="1"
-                            value="1"
-                        >
-                    </label>
-
-                </article>
-
-                <div class="dotted-line"></div>
-
-            </div>
-
-            <!-- TOTAL E FINALIZAÇÃO -->
-            <div class="cart-bottom d-flex justify-content-end align-items-center gap-4">
-
-                <strong>
-                    TOTAL: R$ 229,70
-                </strong>
-
-                <a class="btn-brown" href="pagamento.html">
-                    CONCLUIR
-                </a>
-
-                <a
-                    class="trash-btn"
-                    href="carrinho.html"
-                    aria-label="Excluir"
-                >
-                    ▤
-                </a>
-
-            </div>
-
-        </div>
-
-    </main>
-
+  </div>
+  <nav class="menu"><div class="container">
+    <a href="produtos.html">☰ Categorias ⌄</a>
+    <a href="index.html" class="">Início</a><a href="produtos.html" class="">Destaques</a><a href="index.html#sobre" class="">Sobre nós</a><a href="index.html#contato" class="">Contato</a>
+  </div></nav>
+</header>
+<main>
+<div class="container">
+<h1 class="titulo-pagina">Meu carrinho</h1><p class="sub-pagina">Revise os produtos e escolha a forma de entrega.</p>
+<form class="carrinho" action="finalizar-compra.html" method="get">
+<div class="carrinho__lista"><table><thead><tr><th>Produto</th><th>Preço</th><th>Quantidade</th><th>Subtotal</th><th><span class="sr">Remover</span></th></tr></thead><tbody>
+<tr class="carrinho-item" data-id="1"><td class="ci-produto"><img src="assets/images/bola-pet.svg" alt="Bola Pet"><strong>Bola Pet</strong></td><td data-label="Preço">R$ 29,90</td><td data-label="Quantidade"><label class="qtd"><span class="sr">Quantidade</span><input type="number" value="1" min="1"></label></td><td data-label="Subtotal"><strong>R$ 29,90</strong></td><td><a class="remover" href="carrinho.html" aria-label="Remover Bola Pet">🗑</a></td></tr><tr class="carrinho-item" data-id="4"><td class="ci-produto"><img src="assets/images/pelucia.svg" alt="Pelúcia Cachorro"><strong>Pelúcia Cachorro</strong></td><td data-label="Preço">R$ 49,90</td><td data-label="Quantidade"><label class="qtd"><span class="sr">Quantidade</span><input type="number" value="1" min="1"></label></td><td data-label="Subtotal"><strong>R$ 49,90</strong></td><td><a class="remover" href="carrinho.html" aria-label="Remover Pelúcia Cachorro">🗑</a></td></tr></tbody></table></div>
+<aside class="resumo"><h2>Resumo da compra</h2>
+<p class="resumo__linha"><span>Subtotal dos produtos</span><strong>R$ 79,80</strong></p>
+<p class="resumo__linha"><span>Frete</span><strong>R$ 20,00</strong></p>
+<p class="resumo__linha resumo__total"><span>Total</span><strong>R$ 99,80</strong></p>
+<fieldset><legend>Entrega</legend>
+<label class="opcao"><input type="radio" name="entrega" value="casa" checked> Entrega em casa (+ R$ 20,00)</label>
+<label class="opcao"><input type="radio" name="entrega" value="loja"> Retirada na loja (grátis)</label></fieldset>
+<button class="btn btn-primary btn-block" type="submit">Finalizar compra →</button></aside>
+</form></div>
+</main>
+<footer class="rodape" id="contato"><div class="container rodape__grade">
+  <div><a class="logo" href="index.html"><img src="assets/images/logo.svg" alt="" width="48" height="48"><span>PetShop<b>Minac</b></span></a><p>Tudo para o seu pet, com carinho e qualidade.</p></div>
+  <div><h4>Informações</h4><p>Rua dos Pets, 123 — Centro</p><p>Seg a Sáb, 8h às 18h</p></div>
+  <div><h4>Contato</h4><p>(00) 00000-0000</p><p>contato@petshopminac.com</p></div>
+  <div><h4>Redes sociais</h4><p>Instagram · Facebook · WhatsApp</p></div>
+</div><p class="rodape__copy">© 2026 PetShop Minac. Todos os direitos reservados.</p></footer>
 </body>
 </html>

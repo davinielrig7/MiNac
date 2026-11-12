@@ -1,83 +1,58 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Home | Minac</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <header class="topbar">
-      <div class="container-fluid d-flex align-items-center justify-content-between px-4 px-lg-5">
-        <div class="brand-area">
-          <a class="icon-btn" href="index.html" aria-label="Perfil"><span class="person"></span></a>
-          <a href="index.html"><img class="brand-logo" src="img/logo-minac.png" alt="MINAC Pet Shop"></a>
-        </div>
-        <div class="header-actions">
-          <div class="search-box">PROCURAR ⌕</div>
-          <a class="icon-btn" href="carrinho.html" aria-label="Carrinho">🛒</a>
-        </div>
-      </div>
-    </header>
-    
-    <div class="paw-strip">🐾 · 🐾 · 🐾 · 🐾 · 🐾 · 🐾 · 🐾</div>
-    
-    <nav class="main-nav">
-      <div class="container-fluid px-4 px-lg-5 d-flex gap-5">
-        <a href="index.html">HOME</a>
-        <a href="index.html">DESTAQUE⌄</a>
-        <a href="produtos.html">PRODUTOS⌄</a>
-      </div>
-    </nav>
-    
-    <main class="container-fluid page-wrap">
-      <div class="content">
-        <div class="row benefits text-center g-3">
-          <div class="col-md-4 benefit">
-            <span class="benefit-icon">🚚</span>
-            <div>
-              <strong>Compre no Site</strong>
-              <small>Receba em Casa</small>
-            </div>
-          </div>
-          <div class="col-md-4 benefit">
-            <span class="benefit-icon">💳</span>
-            <div>
-              <strong>Até 10x Sem Juros no cartão</strong>
-              <small>Para compras acima de R$50,00</small>
-            </div>
-          </div>
-          <div class="col-md-4 benefit">
-            <span class="benefit-icon">◉</span>
-            <div>
-              <strong>Whatsapp</strong>
-              <small>+55 27 99878-9890</small>
-            </div>
-          </div>
-        </div>
-        
-        <div class="row justify-content-center g-5 featured-grid">
-          <div class="col-10 col-sm-6 col-lg-3">
-            <a class="category-card" href="produto-racao.html">
-              <img src="img/racao-pedigree.jpg" alt="Ração Pedigree">
-              <span>RAÇÕES</span>
-            </a>
-          </div>
-          <div class="col-10 col-sm-6 col-lg-3">
-            <a class="category-card" href="produto-shampoo.html">
-              <img src="img/shampoo.jpg" alt="Shampoos">
-              <span>SHAMPOOS</span>
-            </a>
-          </div>
-          <div class="col-10 col-sm-6 col-lg-3">
-            <a class="category-card" href="produto-simparic.html">
-              <img src="img/simparic.jpg" alt="Remédios">
-              <span>REMÉDIOS</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </main>
-  </body>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Início — PetShop Minac</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/inicio.css">
+</head>
+<body>
+<header class="topo">
+  <div class="topo__barra container">
+    <a class="logo" href="index.html"><img src="assets/images/logo.svg" alt="" width="52" height="52"><span>PetShop<b>Minac</b></span></a>
+    <form class="busca" action="produtos.html" method="get"><input type="search" name="q" placeholder="O que você procura?" aria-label="Pesquisar"><button type="submit" aria-label="Buscar">⌕</button></form>
+    <div class="topo__acoes">
+      <a class="icone-whats" href="index.html#contato" aria-label="WhatsApp">💬</a>
+      <a class="icone-carrinho" href="carrinho.html" aria-label="Carrinho">🛒<span class="contador">0</span></a>
+      <span class="avatar" aria-hidden="true">👤</span>
+    </div>
+  </div>
+  <nav class="menu"><div class="container">
+    <a href="produtos.html">☰ Categorias ⌄</a>
+    <a href="index.html" class="ativo">Início</a><a href="produtos.html" class="">Destaques</a><a href="index.html#sobre" class="">Sobre nós</a><a href="index.html#contato" class="">Contato</a>
+  </div></nav>
+</header>
+<main>
+<div class="container">
+<section class="banner">
+  <div class="banner__texto"><h1>Tudo o que seu pet precisa em um só lugar!</h1><p>Qualidade, carinho e o melhor para seu amigo de quatro patas.</p><a class="btn btn-primary" href="produtos.html">Ver produtos →</a></div>
+  <img class="banner__img" src="assets/images/hero.jpg" alt="Cachorro e gato">
+</section>
+<section class="secao"><h2>Categorias</h2><div class="categorias">
+<a class="categoria-card" href="produtos.html"><span class="categoria-card__icone">🦴</span><strong>Brinquedos</strong></a><a class="categoria-card" href="produtos.html"><span class="categoria-card__icone">🎀</span><strong>Acessórios</strong></a><a class="categoria-card" href="produtos.html"><span class="categoria-card__icone">🥣</span><strong>Rações</strong></a><a class="categoria-card" href="produtos.html"><span class="categoria-card__icone">💊</span><strong>Medicamentos</strong></a>
+</div></section>
+<section class="secao" id="destaques"><h2>Produtos em destaque</h2><div class="grade-produtos">
+<!-- PRODUTOS EM DESTAQUE: serão inseridos via API.
+     Cada produto deve seguir este modelo (classe .produto-card):
+<article class="produto-card" data-id="" data-categoria="" data-estoque="">
+  <a class="produto-card__img" href="produto.html"><img class="produto-imagem" src="" alt=""></a>
+  <span class="produto-card__cat produto-categoria"></span>
+  <h3 class="produto-card__nome produto-nome"></h3>
+  <p class="produto-card__preco produto-preco"></p>
+  <span class="badge badge-ok">✓ Em estoque</span>
+  <a class="btn btn-outline btn-block" href="produto.html">Ver produto</a>
+</article>
+-->
+</div></section>
+<section class="secao sobre" id="sobre"><h2>Sobre nós</h2><p>O PetShop Minac nasceu do amor pelos animais. Selecionamos brinquedos, acessórios, rações e cuidados de confiança para que seu pet seja feliz e saudável, com atendimento próximo e entrega prática.</p></section>
+</div>
+</main>
+<footer class="rodape" id="contato"><div class="container rodape__grade">
+  <div><a class="logo" href="index.html"><img src="assets/images/logo.svg" alt="" width="48" height="48"><span>PetShop<b>Minac</b></span></a><p>Tudo para o seu pet, com carinho e qualidade.</p></div>
+  <div><h4>Informações</h4><p>Rua dos Pets, 123 — Centro</p><p>Seg a Sáb, 8h às 18h</p></div>
+  <div><h4>Contato</h4><p>(00) 00000-0000</p><p>contato@petshopminac.com</p></div>
+  <div><h4>Redes sociais</h4><p>Instagram · Facebook · WhatsApp</p></div>
+</div><p class="rodape__copy">© 2026 PetShop Minac. Todos os direitos reservados.</p></footer>
+</body>
 </html>

@@ -1,0 +1,9 @@
+.catalogo{display:grid;grid-template-columns:260px 1fr;gap:26px;align-items:start}
+.filtros{background:#fff;border:1.5px solid var(--borda);border-radius:26px;padding:22px;position:sticky;top:16px;box-shadow:var(--sombra)}
+.filtros h2{font-size:1.15rem;margin-bottom:14px}
+.filtros a{display:block;padding:13px 16px;border-radius:8px;margin-bottom:6px;font-weight:600}
+.filtros a:hover{background:var(--bege)}
+.filtros a.ativo{background:var(--marrom);color:#fff}
+.busca-produtos input{width:100%;max-width:420px;padding:13px 16px;border:1.5px solid var(--borda);border-radius:8px;font-size:1rem;background:#fff;margin-bottom:20px;outline:none}
+.busca-produtos input:focus{border-color:var(--laranja)}
+@media(max-width:860px){.catalogo{grid-template-columns:1fr}.filtros{position:static}.filtros ul{display:flex;flex-wrap:wrap;gap:8px}.filtros a{margin:0}}
