@@ -1,0 +1,52 @@
+/* ===== Base compartilhada ===== */
+:root{--marrom:#4a2010;--marrom2:#6b3118;--creme:#fff8f0;--bege:#f9ecdc;--borda:#e6d3bb;--laranja:#f0a030;--verde:#1fa64e;--verde-claro:#dff3e2;--texto:#2b1810;--suave:#7a5c4c;--sombra:0 4px 14px rgba(74,32,16,.08)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Segoe UI",system-ui,-apple-system,Roboto,sans-serif;background:var(--creme);color:var(--texto);line-height:1.5}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+ul,ol{list-style:none}
+.container{width:min(1200px,100% - 32px);margin-inline:auto}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+/* topo */
+.topo{background:var(--marrom);border-radius:0 0 18px 18px;overflow:hidden;box-shadow:var(--sombra)}
+.topo__barra{display:flex;align-items:center;gap:24px;padding:14px 0}
+.logo{display:flex;align-items:center;gap:10px;color:#fff;font-weight:700;font-size:1.2rem;line-height:1.1}
+.logo span{display:flex;flex-direction:column}.logo b{color:var(--laranja)}
+.busca{flex:1;max-width:480px;display:flex;background:#fff;border-radius:8px;overflow:hidden}
+.busca input{flex:1;border:0;padding:13px 16px;font-size:1rem;outline:none;background:transparent}
+.busca button{border:0;background:none;padding:0 16px;font-size:1.3rem;cursor:pointer;color:var(--marrom)}
+.topo__acoes{margin-left:auto;display:flex;align-items:center;gap:26px;font-size:1.7rem}
+.icone-carrinho{position:relative}
+.contador{position:absolute;top:-6px;right:-12px;background:var(--laranja);color:var(--marrom);font-size:.7rem;font-weight:700;border-radius:99px;min-width:18px;height:18px;display:grid;place-items:center}
+.avatar{width:44px;height:44px;border-radius:50%;background:var(--borda);display:grid;place-items:center;font-size:1.4rem}
+.menu{background:var(--marrom2)}
+.menu .container{display:flex;gap:40px;overflow-x:auto}
+.menu a{color:#fff;padding:14px 0;font-size:.95rem;white-space:nowrap;border-bottom:4px solid transparent}
+.menu a.ativo{color:var(--laranja);font-weight:700;border-color:var(--laranja)}
+.menu a:hover{color:var(--laranja)}
+/* botões */
+.btn{font-family:inherit;display:inline-block;padding:12px 22px;border-radius:8px;font-weight:700;font-size:.95rem;border:2px solid var(--marrom);cursor:pointer;text-align:center;transition:.2s}
+.btn-primary{background:var(--marrom);color:#fff}.btn-primary:hover{background:var(--marrom2)}
+.btn-outline{background:#fff;color:var(--marrom)}.btn-outline:hover{background:var(--bege)}
+.btn-block{display:block;width:100%}
+/* títulos */
+.titulo-pagina{font-size:2.2rem;color:var(--marrom);margin-top:32px}
+.sub-pagina{color:var(--suave);margin-bottom:20px}
+h2{color:var(--marrom)}
+/* produto-card reutilizável */
+.grade-produtos{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:22px}
+.produto-card{background:#fff;border:1.5px solid var(--borda);border-radius:26px;padding:18px;display:flex;flex-direction:column;gap:10px;box-shadow:var(--sombra)}
+.produto-card__img{border-radius:16px;overflow:hidden;aspect-ratio:1}
+.produto-card__img img{width:100%;height:100%;object-fit:contain;background:#fff}
+.produto-card__cat{font-size:.75rem;color:var(--suave);text-transform:uppercase;letter-spacing:.05em}
+.produto-card__nome{font-size:1.1rem;color:var(--marrom)}
+.produto-card__preco{font-size:1.3rem;font-weight:800;color:var(--marrom)}
+.badge{align-self:flex-start;font-size:.8rem;font-weight:700;padding:5px 12px;border-radius:6px}
+.badge-ok{background:var(--verde-claro);color:var(--verde)}.badge-off{background:#fdebd0;color:#b36b00}
+/* rodapé */
+.rodape{background:var(--marrom);color:#f3e4d3;margin-top:56px;padding:40px 0 18px;border-radius:24px 24px 0 0}
+.rodape__grade{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:28px}
+.rodape h4{color:var(--laranja);margin-bottom:8px}.rodape p{font-size:.92rem}
+.rodape__copy{text-align:center;margin-top:28px;padding-top:16px;border-top:1px solid rgba(255,255,255,.15);font-size:.85rem}
+@media(max-width:760px){.topo__barra{flex-wrap:wrap;gap:12px}.busca{order:3;flex-basis:100%;max-width:none}.topo__acoes{gap:18px}.menu .container{gap:22px}.titulo-pagina{font-size:1.7rem}}
+.aviso-vazio{grid-column:1/-1;color:var(--suave);padding:20px 0}

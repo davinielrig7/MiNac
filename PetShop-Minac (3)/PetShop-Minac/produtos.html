@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nossos produtos — PetShop Minac</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/produtos.css">
+</head>
+<body>
+<header class="topo">
+  <div class="topo__barra container">
+    <a class="logo" href="index.html"><img src="assets/images/logo.svg" alt="" width="52" height="52"><span>PetShop<b>Minac</b></span></a>
+    <form class="busca" action="produtos.html" method="get"><input type="search" name="q" placeholder="O que você procura?" aria-label="Pesquisar"><button type="submit" aria-label="Buscar">⌕</button></form>
+    <div class="topo__acoes">
+      <a class="icone-whats" href="index.html#contato" aria-label="WhatsApp">💬</a>
+      <a class="icone-carrinho" href="carrinho.html" aria-label="Carrinho">🛒<span class="contador">0</span></a>
+      <span class="avatar" aria-hidden="true">👤</span>
+    </div>
+  </div>
+  <nav class="menu"><div class="container">
+    <a href="produtos.html">☰ Categorias ⌄</a>
+    <a href="index.html" class="">Início</a><a href="produtos.html" class="ativo">Produtos</a><a href="index.html#sobre" class="">Sobre nós</a><a href="index.html#contato" class="">Contato</a>
+  </div></nav>
+</header>
+<main>
+<div class="container">
+<h1 class="titulo-pagina">Nossos produtos</h1><p class="sub-pagina">Encontre produtos para cuidar do seu melhor amigo.</p>
+<div class="catalogo">
+<aside class="filtros"><h2>Filtrar por categoria</h2><ul id="filtros-categorias">
+<li><a class="ativo" href="produtos.html" data-filtro="todos">Todos os produtos</a></li></ul></aside>
+<div class="catalogo__lista">
+<form class="busca-produtos" action="produtos.html" method="get"><input type="search" id="busca-produtos" name="q" placeholder="Buscar produtos..." aria-label="Buscar produtos"></form>
+<div class="grade-produtos" id="produtos-container"></div></div></div></div>
+</main>
+<footer class="rodape" id="contato"><div class="container rodape__grade">
+  <div><a class="logo" href="index.html"><img src="assets/images/logo.svg" alt="" width="48" height="48"><span>PetShop<b>Minac</b></span></a><p>Tudo para o seu pet, com carinho e qualidade.</p></div>
+  <div><h4>Informações</h4><p>Rua dos Pets, 123 — Centro</p><p>Seg a Sáb, 8h às 18h</p></div>
+  <div><h4>Contato</h4><p>(00) 00000-0000</p><p>contato@petshopminac.com</p></div>
+  <div><h4>Redes sociais</h4><p>Instagram · Facebook · WhatsApp</p></div>
+</div><p class="rodape__copy">© 2026 PetShop Minac. Todos os direitos reservados.</p></footer>
+<script src="js/produtos-data.js"></script>
+<script src="js/script.js?v=5" defer></script>
+</body>
+</html>

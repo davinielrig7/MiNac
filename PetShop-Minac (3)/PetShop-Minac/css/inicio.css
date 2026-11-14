@@ -1,0 +1,12 @@
+.banner{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:24px;background:var(--bege);border-radius:36px;margin-top:16px;padding:28px 40px;overflow:hidden}
+.banner h1{font-size:clamp(1.8rem,4vw,2.8rem);color:var(--marrom);line-height:1.15;margin-bottom:14px}
+.banner p{font-size:1.1rem;margin-bottom:22px;max-width:460px}
+.banner__img{border-radius:24px;width:100%;aspect-ratio:398/245;object-fit:cover;box-shadow:var(--sombra)}
+.secao{margin-top:40px}.secao h2{font-size:1.6rem;margin-bottom:18px}
+.categorias{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:20px}
+.categoria-card{background:#fff;border:1.5px solid var(--borda);border-radius:20px;padding:26px 12px;text-align:center;display:flex;flex-direction:column;gap:10px;color:var(--marrom);transition:.2s;box-shadow:var(--sombra)}
+.categoria-card:hover{transform:translateY(-4px);border-color:var(--laranja)}
+.categoria-card__icone{font-size:2.4rem}
+.sobre{background:#fff;border:1.5px solid var(--borda);border-radius:26px;padding:32px;box-shadow:var(--sombra)}
+.sobre p{max-width:760px;font-size:1.05rem}
+@media(max-width:760px){.banner{grid-template-columns:1fr;padding:24px}}
